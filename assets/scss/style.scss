@@ -1,3 +1,53 @@
-h1{
-    color: aqua;
+@import "./base.scss";
+
+//Start Header -----------------------
+.header {
+    height: 120px;
+    background: linear-gradient(-180deg,#f53d2d,#f63);
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        .navbar-list {
+            display: inline-block;
+            list-style: none;
+            padding: 0;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 0;
+            .navbar-list-item {
+                min-height: 18px;
+                position: relative;
+                margin: 8px;
+                color: $white-color;
+                display: inline-flex;
+                align-items: center;
+                a {
+                    color: $white-color;
+                    text-decoration: none;
+                    i {
+                        font-size: 1.6rem;
+                        margin: 0 5px;
+                    }
+                    &:hover {
+                        color: hsla(0,0%,100%,.7);
+                    }
+                }
+                
+            }
+        }
+    }
 }
+//End Header -----------------------
+
+
+//Start separate -------------
+.navbar-separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-right: 1px solid #f86c5c;
+    height: 12px;
+    top: 10%;
+    right: -10px;
+}
+//End separate --------------
