@@ -34,6 +34,22 @@
                 }
                 
             }
+            // Show QR Code 
+            .show-header-qr {
+                &:hover .header-qr{
+                    display: block;
+                }
+            }
+            .show-notify {
+                &:hover .comp-notify {
+                    display: block;
+                }
+            }
+            .show-language {
+                &:hover .comp-language {
+                    display: block;
+                }
+            }
         }
     }
 }
@@ -51,3 +67,252 @@
     right: -10px;
 }
 //End separate --------------
+
+//Start QR CODE ------------
+.header-qr {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 186px;
+    border-radius: 2px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: fadeIn ease-in .3s;
+    &::after {
+        position: absolute;
+        content: "";
+        background: red;
+        width: 186px;
+        height: 35px;
+        top: -20px;
+        opacity: 0;
+    }
+    .qr-img {
+        width: 100%;
+        border-radius: inherit;
+        
+    }
+    .link-app {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        a {
+            img {
+                height: 18px;
+            }
+        }
+        .link-ggplay {
+                margin-left: 10px;
+            }
+        .link-appstore {
+                margin-right: 10px;
+            }
+    }
+}
+//End QR CODE ------------
+
+// Start comp Notification----------
+.comp-notify {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    background: $white-color;
+    width: 400px;
+    border-radius: 2px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: fadeIn ease-in .3s;
+    display: none;
+    &::after {
+        position: absolute;
+        content: "";
+        background: red;
+        width: 400px;
+        height: 35px;
+        top: -20px;
+        opacity: 0;
+    }
+    &::before {
+        content:"";
+        border-bottom: 20px solid $white-color;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        position: absolute;
+        right: 15px;
+        top: -10px;
+    }
+    .notify-title {
+        color: rgba(0, 0, 0, 0.288);
+        height: 40px;
+        padding: 0 10px;
+        h4 {
+            margin: 0;
+            line-height: 40px;
+        }
+    }
+    .notify-main {
+        padding: 0;
+        
+        li {
+            padding: 8px 10px;
+            cursor: pointer;
+            &:hover {
+                background: #0000001a;
+            }
+            a {
+                display: flex;
+                img {
+                    width: 40px;
+                    margin-right: 12px;
+                }
+                span {
+                    color: #000000;
+                    display: block;
+                    margin-bottom: 4px;
+                }
+                .text-content {
+                    color: #0000007c;
+                }
+            } 
+        }
+        
+    }
+    .notify-button-seeall {
+        text-align: center;
+        height: 40px;
+        &:hover {
+            background: #0000001a;
+        }
+        a {
+            color: $black-color!important;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 0;
+            line-height: 40px;
+        }
+    }
+}
+// End comp Notification----------
+
+// Start comp Language
+.comp-language {
+    display: none;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    background: $white-color;
+    width: 200px;
+    border-radius: 2px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: fadeIn ease-in .3s;
+    .text-language {
+        padding: 10px;
+        color: $black-color;
+        cursor: pointer;
+        &:hover{
+            color: #f8472f;
+        }
+        
+    } 
+    &::after {
+        position: absolute;
+        content: "";
+        background: red;
+        width: 400px;
+        height: 35px;
+        top: -20px;
+        opacity: 0;
+    }
+    &::before {
+        content:"";
+        border-bottom: 20px solid $white-color;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        position: absolute;
+        right: 15px;
+        top: -10px;
+    }
+}
+// End com Language
+
+// CSS Modal Component Register
+.modal-inner {
+    .author-form {
+        border-radius: 20px;
+        width: 500px;
+        padding: 0 32px;
+        .header-modal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            h3 {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            a {
+                color: #f7462e;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1.6rem;
+            }
+        }
+        .input-modal {
+            .form-group {
+                margin-bottom: 16px;
+                input {
+                    width: 100%;
+                    height: 40px;
+                    border: 1px solid #3333337d;
+                    border-radius: 2px;
+                    outline: none;
+                    font-size: 1.2rem;
+                    padding: 0 12px;
+                    &:focus {
+                        border-color: #201f1f;
+                    }
+                }
+            }
+            .policy-text {
+                text-align: center;
+                font-size: 1.4rem;
+                padding: 0 10px;
+                line-height: 1.3;
+                span {
+                    a {
+                        color: #f7462e;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .button-modal {
+                margin-top: 80px;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: flex-end;
+                .button-modal-back {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .button-socials {
+        background: #f5f5f5;
+        padding: 0 32px;
+        width: 100%;
+        height: 60px;
+        align-items: center;
+        justify-content:space-around;
+        display: flex;
+    }
+}
+// End CSS Modal Component Register
+
+//Animation
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -20,7 +20,21 @@
                 <ul class="navbar-list">
                     <li class="navbar-list-item navbar-separate"><a href="#">Kênh người bán</a></li>
                     <li class="navbar-list-item navbar-separate"><a href="#">Trở thành người bán Shopee</a></li>
-                    <li class="navbar-list-item navbar-separate"><a href="#">Tải ứng dụng</a></li>
+                    <li class="navbar-list-item navbar-separate show-header-qr"><a href="#">Tải ứng dụng</a>
+                        <!-- Start comp QR-->
+                        <div class="header-qr">
+                            <img class="qr-img" src="./assets/img/code_qr.png" alt="Code QR">
+                            <div class="link-app">
+                                <a href="" class="link-ggplay">
+                                    <img src="./assets/img/google_play.png" alt="">
+                                </a>
+                                 <a href="" class="link-appstore">
+                                    <img src="./assets/img/app_store.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End comp QR-->
+                    </li>
                     <li class="navbar-list-item"><span>Kết nối</span>
                         <a href="#">
                             <i class="fa fa-facebook-square" aria-hidden="true"></i>
@@ -31,9 +45,55 @@
                     </li>
                 </ul>
                 <ul class="navbar-list">
-                    <li class="navbar-list-item"><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i>Thông Báo</a></li>
+                    <li class="navbar-list-item show-notify"><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i>Thông Báo</a>
+                        <!-- Start comp Notify -->
+                        <div class="comp-notify">
+                            <header class="notify-title">
+                                <h4>Thông Báo Mới Nhận</h4>
+                            </header>
+                            <ul class="notify-main">
+                                <li>
+                                    <a href="#">
+                                        <span>
+                                            <img src="./assets/img/notify-2.png" alt="">
+                                        </span>
+                                        <div class="text-notify">
+                                            <span class="text-title">Ting! Ting! Nguyễn mau mở ví</span>
+                                            <span class="text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate pariatur architecto, distinctio reiciendis eum necessitatibus non optio delectus ex ipsum ad unde in illum fugit aperiam illo temporibus explicabo rerum.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>
+                                            <img src="./assets/img/notify-2.png" alt="">
+                                        </span>
+                                        <div class="text-notify">
+                                            <span class="text-title">Ting! Ting! Nguyễn mau mở ví</span>
+                                            <span class="text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate pariatur architecto, distinctio reiciendis eum necessitatibus non optio delectus ex ipsum ad unde in illum fugit aperiam illo temporibus explicabo rerum.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="notify-button-seeall">
+                                <a href="#">Xem tất cả</a>
+                            </div>
+                        </div>
+                        <!-- End comp Notify -->
+                    </li>
                     <li class="navbar-list-item"><a href=""><i class="fa fa-question-circle-o" aria-hidden="true"></i>Hỗ Trợ</a></li>
-                    <li class="navbar-list-item"><a href=""><i class="fa fa-globe" aria-hidden="true"></i>Tiếng Việt<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                    <li class="navbar-list-item show-language"><a href=""><i class="fa fa-globe" aria-hidden="true"></i>Tiếng Việt<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <!--Start show language-->
+                        <div class="comp-language">
+                            <div class="text-language">
+                                Tiếng Việt
+                            </div>
+                            <div class="text-language">
+                                Tiếng Anh
+                            </div>
+                        </div>
+                        <!--End show language-->
+                    </li>
                     <li class="navbar-list-item navbar-separate"><a href="">Đăng Ký</a></li>
                     <li class="navbar-list-item"><a href="">Đăng Nhập</a></li>
                 </ul>
@@ -53,5 +113,50 @@
         </div>
         <!-- End Footer -->
     </div>
+    <!--Modal component-->
+    <div class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-body">
+            <div class="modal-inner">
+                <div class="author-form">
+                    <div class="header-modal">
+                        <h3>Đăng Ký</h3>
+                        <a href="">Đăng Nhập</a>
+                    </div>
+                    <div class="input-modal">
+                        <div class="form-group">
+                            <input type="text" placeholder="Email của bạn" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Mật khẩu của bạn" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Nhập lại mật khẩu của bạn" class="form-input">
+                        </div>
+                        <div class="policy-text">
+                            <span>Bằng việc đăng ký, bạn đồng ý với Shopee về <a href="">Điều khoản dịch vụ</a> & <a href="">Chính sách bảo mật</a></span>
+                        </div>
+                        <div class="button-modal">
+                            <button class="btn button-modal-back">TRỞ LẠI</button>
+                            <button class="btn btn-primary">ĐĂNG KÝ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-socials">
+                    <button class="btn btn-facebook">
+
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            <span>Kết nối với Google</span>
+
+                    </button>
+                    <button class="btn btn-google">
+                        <i class="fa fa-google" aria-hidden="true"></i>
+                        <span>Kết nối với Google</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal component-->
 </body>
 </html>
